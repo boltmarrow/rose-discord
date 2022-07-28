@@ -1,0 +1,31 @@
+{
+  "name": "rose-discord",
+  "version": "0.0.0",
+  "description": "a host-your-own-instance discord bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boltmarrow/rose-discord.git"
+  },
+  "author": {
+    "name": "Emery",
+    "email": "boltmarrow@proton.me"
+  },
+  "license": "MIT",
+  "bugs": { 
+    "url": "https://github.com/crabgnome/rose-discord/issues"
+  },
+  "homepage": "https://github.com/crabgnome/rose-discord#readme",
+  "keywords": [
+    "discord"
+  ],
+  "dependencies": {
+    "discord.js": "^14.0.0"
+  },
+  "engines": {
+    "node": ">= 16.9.0"
+  }
+}
