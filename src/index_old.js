@@ -1,7 +1,7 @@
 //console.log('Hello world!');
 
-const { SapphireClient } = require('@sapphire/framework');
-const { token } = require('../config.json');
+import { SapphireClient } from '@sapphire/framework';
+import { token } from '../config.json';
 
 const client = new SapphireClient({
     defaultPrefix: '<>',
@@ -11,6 +11,28 @@ const client = new SapphireClient({
 });
 
 client.login(token);
+
+const sqlite = require('sqlite');
+
+//declaring default commands and where the custom commands are located
+client.registry
+    .registerGroups([
+        ['basic', 'Basic commands'],
+        ['random', 'Randomizer commands'],
+        ['msghas', 'regex pattern recognition and response'],
+        ['misc', 'Misc']
+    ])
+    .registerDefaults()
+    .registerCommandsIn(__dirname + '/commands');
+
+/** 
+ * keeps track of prefix and settings and stuff between resets
+ * mostly obsolete but sqlite is a dependency already so fuck it
+ * ignored by git because only the one most recently used for real will be up to date
+ */
+client.setProvider(
+    sqlite.open(__dirname + '/settings.sqlite3').then(db => new commando.SQLiteProvider(db))
+).catch(console.error);
 
 //setup on restart
 client
@@ -31,6 +53,12 @@ client
     .on('error', (error) => {
         console.log(`caught error at ${getTimestamp()}: ${error.name}`);
     });
+
+
+/**
+ * Login as given instance
+ * NOTE: you must supply the secret token of your instance yourself in ./secret_token.txt
+ */
 
 // prints date & time in YYYY-MM-DD HH:MM:SS format
 function getTimestamp() {
