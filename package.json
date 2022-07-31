@@ -24,7 +24,8 @@
   ],
   "dependencies": {
     "discord.js": "^13.0.0",
-    "@sapphire/framework": "latest"
+    "@sapphire/framework": "latest",
+    "@sapphire/discord.js-utilities": "latest"
   },
   "engines": {
     "node": "^16.9.0"
