@@ -1,11 +1,13 @@
 //console.log('Hello world!');
 
 const { SapphireClient } = require('@sapphire/framework');
+const { GatewayIntentBits } = require('discord.js'); // will calling it this break stuff?
 const { token } = require('../config.json');
 
 const client = new SapphireClient({
-    defaultPrefix: '<>',
-    intents: ['GUILDS', 'GUILD_MESSAGES']/*,
+    defaultPrefix: '<>', // keeping this ig
+    intents: [GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages], // necessary to read messages or something idk
+    loadMessageCommandListeners: true/*, // also for message commands
     owner: '268905918446567425',
     invite: 'https://discord.gg/qYYvarbZMX'*/
 });
