@@ -5,8 +5,8 @@ class PingCommand extends Command {
         super(context, {
             ...options,
             name: 'ping',
-            group: '',
-            memberName: '',
+            group: 'basic',
+            memberName: 'ping',
             description: 'ping pong'
         });
     }
