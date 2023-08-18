@@ -23,10 +23,10 @@
     "discord"
   ],
   "dependencies": {
-    "discord.js": "14.x",
+    "discord.js": "^14.12.1",
     "@sapphire/framework": "latest"
   },
   "engines": {
-    "node": "^16.9.0"
+    "node": "^20.5.1"
   }
 }

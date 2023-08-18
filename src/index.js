@@ -34,7 +34,7 @@ client
         console.log(`caught error at ${getTimestamp()}: ${error.name}`);
     });
 
-// prints date & time in YYYY-MM-DD HH:MM:SS format
+/* prints date & time in YYYY-MM-DD HH:MM:SS format */
 function getTimestamp() {
     let date_ob = new Date();
 
