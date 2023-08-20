@@ -5,7 +5,7 @@ const { GatewayIntentBits } = require('discord.js'); // will calling it this bre
 const { token } = require('../config.json');
 
 // for msghas
-require('@sapphire/plugin-pattern-commands/register');
+import '@sapphire/plugin-pattern-commands/register';
 
 const client = new SapphireClient({
     defaultPrefix: '<>', // keeping this ig

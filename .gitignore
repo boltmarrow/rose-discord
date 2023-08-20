@@ -2,3 +2,4 @@ node_modules
 old_commands
 framework.txt
 config.json
+package-lock.json
