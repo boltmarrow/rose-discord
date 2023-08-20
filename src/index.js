@@ -4,6 +4,9 @@ const { SapphireClient } = require('@sapphire/framework');
 const { GatewayIntentBits } = require('discord.js'); // will calling it this break stuff?
 const { token } = require('../config.json');
 
+// for msghas
+require('@sapphire/plugin-pattern-commands/register');
+
 const client = new SapphireClient({
     defaultPrefix: '<>', // keeping this ig
     intents: [GatewayIntentBits.MessageContent, GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages], // necessary to read messages or something idk

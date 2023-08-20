@@ -15,7 +15,7 @@
     "email": "boltmarrow@proton.me"
   },
   "license": "MIT",
-  "bugs": { 
+  "bugs": {
     "url": "https://github.com/crabgnome/rose-discord/issues"
   },
   "homepage": "https://github.com/crabgnome/rose-discord#readme",
@@ -23,8 +23,12 @@
     "discord"
   ],
   "dependencies": {
-    "discord.js": "^14.12.1",
-    "@sapphire/framework": "latest"
+    "@sapphire/decorators": "^6.0.2",
+    "@sapphire/framework": "^4.5.1",
+    "@sapphire/plugin-pattern-commands": "^5.0.1",
+    "@sapphire/stopwatch": "^1.5.0",
+    "@sapphire/utilities": "^3.13.0",
+    "discord.js": "^14.13.0"
   },
   "engines": {
     "node": "^20.5.1"
