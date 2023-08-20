@@ -25,7 +25,7 @@ class EmojCommand extends Command {
                 if (/[a-z]/.test(x))
                     //make it into corresponding emoji
                     output += `:regional_indicator_${x}: `;
-                //else just add it raw (TODO add more emojis here later)
+                //else just add it raw (TODO: add more emojis here later)
                 else output += `${x} `;
             });
             //space between words

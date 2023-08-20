@@ -4,7 +4,7 @@ import { ApplyOptions } from '@sapphire/decorators';
 
 @ApplyOptions<PatternCommand.Options>({
 	aliases: ['rose'],
-	chance: 100
+	chance: 99
 })
 export class RoseCommand extends PatternCommand {
 	public messageRun(message: Message) {
